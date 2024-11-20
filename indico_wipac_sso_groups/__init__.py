@@ -7,4 +7,4 @@ _ = make_bound_gettext('WIPACSSOGroups')
 
 @signals.core.import_tasks.connect
 def _import_tasks(sender, **kwargs):
-    import .task  # noqa: F401
+    import indico_wipac_sso_groups.task  # noqa: F401

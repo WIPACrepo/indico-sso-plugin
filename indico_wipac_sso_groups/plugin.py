@@ -13,7 +13,7 @@ from indico.web.forms.base import IndicoForm
 from indico.web.forms.validators import HiddenUnless
 from indico.web.forms.widgets import SwitchWidget
 
-from . import _
+from indico_wipac_sso_groups import _
 
 
 class SettingsForm(IndicoForm):
