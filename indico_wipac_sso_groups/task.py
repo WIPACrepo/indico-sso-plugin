@@ -5,7 +5,7 @@ from indico.core.db import db
 from indico.util.date_time import now_utc
 
 
-@celery.periodic_task(run_every=crontab(minute='0', hour='2'), plugin='sso_group_mapping')
+@celery.periodic_task(run_every=crontab(minute='0', hour='2'), plugin='wipac_sso_groups')
 def scheduled_group_check():
     from indico_wipac_sso_groups.plugin import WIPACSSOGroupsPlugin
     if not WIPACSSOGroupsPlugin.settings.get('enable_group_cleanup'):
